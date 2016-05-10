@@ -1,0 +1,9 @@
+ <div class="row">
+       <%= form_for items_create_path do |f| %>
+        <div class="form-group">
+          <%= f.label :name %>
+          <%= f.text_field :name, class: 'form-control', placeholder: "Enter item" %>
+        </div>
+        <%= f.submit "Save", class: 'btn btn-success' %>
+      <% end %>
+  </div>
