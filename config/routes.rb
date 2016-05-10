@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'items/create'
 
-  root 'user#show'
+  root 'users#show'
 
   devise_for :users
 
