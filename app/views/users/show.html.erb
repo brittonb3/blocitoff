@@ -4,10 +4,7 @@
     <%= @user.email %>
 </div>
 <h4>Add an item</h4>
-<div class="row">
-    <%= render 'items/form', item: Item.new, user: @user %>
- </div>
-
+  <%= render partial: 'items/form', item: Item.new %>
 <h3>Items</h3>
   <% @user.items.each do |item| %>
   <%= render partial: 'items/item', locals: {item: item} %>
