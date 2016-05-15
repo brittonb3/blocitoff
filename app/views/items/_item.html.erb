@@ -1,7 +1,8 @@
 <div class="media">
    <div class="media-body">
-     <p><%= item.name %>
+     <p><strong><%= item.name %></strong>
+     <small>( <%= distance_of_time_in_words(item.created_at, Time.now - 7.days)%> left to complete )</small>
      <%= link_to "Delete", [item.user , item], method: :delete, remote: true, class: 'glyphicon glyphicon-ok' %>
-     </p>
+   </p>
    </div>
  </div>
