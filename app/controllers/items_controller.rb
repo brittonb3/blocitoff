@@ -6,6 +6,7 @@ class ItemsController < ApplicationController
 
       if @item.save
         flash[:notice] = "Item was saved successfully."
+<<<<<<< HEAD
         redirect_to current_user
       else
         flash.now[:alert] = "There was an error saving the item. Please try again."
@@ -26,6 +27,12 @@ class ItemsController < ApplicationController
       respond_to do |format|
         format.html
         format.js
+=======
+        redirect_to root_path
+      else
+        flash.now[:alert] = "There was an error saving the item. Please try again."
+        redirect_to root_path
+>>>>>>> create-items
       end
     end
 
