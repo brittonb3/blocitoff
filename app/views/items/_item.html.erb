@@ -1,6 +1,6 @@
-<div class="media">
+<div class="media" >
    <div class="media-body">
-     <p><%= item.name %>
+     <p id="item-<%=item.id %>"><%= item.name %>
      <%= link_to "Delete", [item.user , item], method: :delete, remote: true, class: 'glyphicon glyphicon-ok' %>
      </p>
    </div>

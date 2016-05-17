@@ -1,5 +1,6 @@
 <% if @item.destroyed? %>
-   $('#item-<%= @item.id %>').hide();
+   $('#item-<%=@item.id %>').hide();
+   $('.notice').text("Item was deleted successfully.");
  <% else %>
-   $('.flash').prepend("<div class='alert alert-danger'><button type='button' class='close' data-dismiss='alert'>&times;</button><%= flash.now[:alert] %></div>");
+   $('.flash').text("Item couldn't be deleted. Please try again.");
  <% end %>
