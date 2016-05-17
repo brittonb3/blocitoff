@@ -6,7 +6,6 @@ class ItemsController < ApplicationController
 
       if @item.save
         flash[:notice] = "Item was saved successfully."
-<<<<<<< HEAD
         redirect_to current_user
       else
         flash.now[:alert] = "There was an error saving the item. Please try again."
@@ -21,21 +20,15 @@ class ItemsController < ApplicationController
 
       respond_to do |format|
         format.html do
-          if @item.destroyed?
+         if @item.destroyed?
             flash[:notice] = "Item was deleted successfully."
-          else
-            flash[:alert] = "Item couldn't be deleted. Please try again."
+         else
+           flash[:alert] = "Item couldn't be deleted. Please try again."
           end
         end
-        format.js
-=======
-        redirect_to root_path
-      else
-        flash.now[:alert] = "There was an error saving the item. Please try again."
-        redirect_to root_path
->>>>>>> create-items
+         format.js
+        end
       end
-    end
 
     private
 
